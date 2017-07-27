@@ -1,30 +1,16 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+# TV Theory Overflow
+A place to say anything about your favorite shows
 
-### Purpose
-The Sinatra Skeleton:
+### Tall Bois
+##### Team Members
+* Sanjay Nelson
+* Zackory Taylor
+* Michael Knapp
+* Paul Hammerschmidt
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
-
-### Quickstart
-
-1.  `bundle install`
-2.  `shotgun config.ru`
-
-As needed, create models & migrations with the `rake` tasks:
-
-```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
-
-### Contributing
-
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
-
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
-
-Be prepared to give and receive specific, actionable, and kind feedback!
+### User Stories
+* A user can register and login with our site.
+* A logged in user can post a question, an answer to a question, and a comment to either.
+* A logged in user who posed a question can pick that question's best answer.
+* A logged in user can upvote or downvote a question, answer, and comment only once.
+* A guest to the site can view all the content but cannot post anything, nor can they vote.
