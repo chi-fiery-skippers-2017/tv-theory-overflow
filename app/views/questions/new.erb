@@ -1,6 +1,6 @@
 <h1>New Question Form</h1>
 
-<form class="new-question" action="/question" method="post">
+<form class="new-question" action="/users/<%= @user.id %>/questions" method="post">
   <input id="question_title" type="text" name="question[title]" placeholder="title">
   <textarea rows="4" cols="50" id="question_description" name="question[description]" placeholder="description"></textarea>
   <button type="submit">Post</button>

@@ -2,7 +2,7 @@
 
 <% if logged_in? %>
   <nav class="new-question">
-    <a href="/questions/new">Ask a question</a>
+    <a href="/users/<%= current_user.id %>/questions/new">Ask a question</a>
   </nav>
 <% end %>
 
@@ -10,7 +10,7 @@
   <% @questions.each do |question| %>
     <article class="question">
       <p>
-        <%= question.title %>
+        <a href="/questions/<%= question.id %>"><%= question.title %></a>
       </p>
     </article>
   <% end %>
