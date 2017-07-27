@@ -1,5 +1,5 @@
 # TV Theory Overflow
-A place to say anything about your favorite shows
+Nothing is confirmed
 
 ### Tall Bois
 ##### Team Members
