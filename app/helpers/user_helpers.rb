@@ -3,7 +3,7 @@ def current_user
 end
 
 def logged_in?
-  session[:user_id] != nil
+  !!current_user
 end
 
 def authenticate!
