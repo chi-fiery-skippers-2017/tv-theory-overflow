@@ -1,0 +1,17 @@
+<h1>Questions Index Page</h1>
+
+<% if logged_in? %>
+  <nav class="new-question">
+    <a href="/users/<%= current_user.id %>/questions/new">Ask a question</a>
+  </nav>
+<% end %>
+
+<div class="question-list">
+  <% @questions.each do |question| %>
+    <article class="question">
+      <p>
+        <a href="/questions/<%= question.id %>"><%= question.title %></a>
+      </p>
+    </article>
+  <% end %>
+</div>
