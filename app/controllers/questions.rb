@@ -4,11 +4,15 @@ get '/questions' do
 end
 
 get '/users/:user_id/questions/new' do
+  authenticate!
   @user = current_user
   erb :"questions/new"
 end
 
 post '/users/:user_id/questions' do
+  authenticate!
+  redirect '/404' unless current_user.id == params[:user_id].to_i
+
   @user = current_user
   @question = @user.questions.new(params[:question])
   if @question.save
