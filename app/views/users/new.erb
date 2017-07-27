@@ -1,0 +1,15 @@
+<% if @user.errors.any? %>
+  <%= erb :'/users/_errors', locals: {errors: @user.errors} %>
+<% end %>
+<form class="form" action="/users" method="POST">
+  <div class="form-input">
+    <input class="input-box" type="text" placeholder="username" name="user[username]">
+  </div>
+  <div class="form-input">
+    <input class="input-box" type="email" placeholder="email" name="user[email]">
+  </div>
+  <div class="form-input">
+    <input class="input-box" type="password" placeholder="password" name="user[password]">
+  </div>
+  <button class="submit-button" type="submit">Register</button>
+</form>
