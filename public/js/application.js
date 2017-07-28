@@ -19,8 +19,8 @@ $(document).ready(function() {
       $('#question-answers-list').append(response);
       $('#new-ans-form').children().first().val("");
     })
-    .fail(function() {
-      console.log("error");
+    .fail(function(response) {
+      $('#answer-new').prepend(response);
     })
   })
 

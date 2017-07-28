@@ -11,7 +11,11 @@ post '/questions/:question_id/answers' do
       redirect "/questions/#{params[:question_id]}"
     end
   else
-    @errors = @answer.errors.full_massages
-    erb :"questions/show"
+    status 400
+    if request.xhr?
+      @answer.errors.full_messages
+    else
+      erb :"questions/show"
+    end
   end
 end
