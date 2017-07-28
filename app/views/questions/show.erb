@@ -1,13 +1,15 @@
-<h1><%= @question.title %></h1>
-<article class="question-info">
+<article class="question-info stable-parent">
+  <h1 class="question-title"><%= @question.title %></h1>
   <div id="question-description">
     <%= @question.description %>
   </div>
-  <div id="question-author">
-    <%= @question.author.username %>
-  </div>
-  <%= erb :'/questions/_vote_buttons' %>
-  <div id="question-answers-list">
+  <% if logged_in? %>
+    <form class="vote-container" action="/questions/<%= @question.id %>/votes" type="POST">
+      <%= erb :'/questions/_vote_buttons' %>
+    </form>
+  <% end %>
+  <%= erb :'/partials/_post_footer', locals: {post: @question} %>
+  <div id="question-answers-list" class="stable-parent">
     <% @question.answers.each do |answer| %>
       <%= erb :'answers/_show_answer', locals: { answer: answer } %>
     <% end %>

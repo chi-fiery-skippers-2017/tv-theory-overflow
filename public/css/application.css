@@ -20,7 +20,7 @@ header.full-container {
 
 #page-title {
   position: absolute;
-  bottom: -15px;
+  /*bottom: -15px;*/
   left: 20px;
   text-transform: lowercase;
   font-size: 2.2em;
@@ -30,6 +30,17 @@ header.full-container {
   background: none!important;
   border: none;
   padding: 0!important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-decoration: none;
 }
 
 nav.container {
@@ -61,4 +72,29 @@ nav.new-question {
   position: absolute;
   top: 25px;
   right: 10px;
+}
+
+.question-title {
+  display: inline;
+}
+
+.vote-container {
+  display: inline;
+}
+
+.vote-buttons {
+  display: inline;
+}
+
+.vote-option {
+  background: transparent;
+  border: none;
+}
+
+.post-footer {
+  display: inline;
+}
+
+.post-footer .points:after{
+  content: " points";
 }

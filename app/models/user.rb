@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_many :votes, foreign_key: :voter_id
 
   validates :username, :email, presence: true
+  validates :username, :email, uniqueness: true
   validate :validate_password
 
   include BCrypt

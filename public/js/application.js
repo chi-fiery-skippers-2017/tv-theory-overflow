@@ -1,9 +1,25 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $(".stable-parent").on("click", ".vote-option", function(){
+    event.preventDefault();
+    var $this = $(this);
+    var voteOption = $this.attr("class");
+    // console.log(voteOption)
+    var url = $this.parents(".vote-container").attr("action")
+    castVote(url, voteOption, $this)
+  })
+
+  function castVote(url, voteOption, $location) {
+    promise = $.ajax({
+      url: url,
+      type: "POST",
+      data: {type: voteOption}
+    })
+    promise.done(function(response){
+      $location.parents(".vote-container").siblings(".post-footer").children(".points").text(response)
+    })
+  }
+
   $('#new-ans-form').on("submit", function(event) {
     event.preventDefault();
     var $form = $(this);
