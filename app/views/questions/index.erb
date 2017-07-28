@@ -9,7 +9,7 @@
 <div class="question-list">
   <% @questions.each do |question| %>
     <article class="question">
-      <p>
+      <p><%= erb :'/questions/_vote_buttons' %>
         <a href="/questions/<%= question.id %>"><%= question.title %></a>
       </p>
     </article>

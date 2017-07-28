@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   include BCrypt
 
-  def authenticate(input_password)
+  def verify_password(input_password)
     self.password == input_password
   end
 
