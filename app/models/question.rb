@@ -1,4 +1,6 @@
 class Question < ActiveRecord::Base
+  include Votable
+
   has_many :votes, as: :votable
   has_many :comments, as: :commentable
   belongs_to :best_answer, class_name: "Answer"

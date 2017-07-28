@@ -1,8 +1,10 @@
 $(document).ready(function() {
 
   $(".vote-container").on("click", ".vote-option", function(){
+    event.preventDefault();
     var $this = $(this);
-    var voteOption = $this.attr("id");
+    var voteOption = $this.attr("class");
+    console.log(voteOption)
     var url = $this.parents(".vote-container").attr("action")
     castVote(url, voteOption)
   })
