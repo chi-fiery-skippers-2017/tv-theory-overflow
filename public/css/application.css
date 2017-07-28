@@ -62,3 +62,12 @@ nav.new-question {
   top: 25px;
   right: 10px;
 }
+
+#vote-container {
+  display: inline;
+}
+
+.vote-option {
+  background: transparent;
+  border: none;
+}
