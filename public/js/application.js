@@ -4,4 +4,24 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $('#new-ans-form').on("submit", function(event) {
+    event.preventDefault();
+    var $form = $(this);
+    var myUrl = $form.attr("action");
+    var myData = $form.serialize();
+
+    $.ajax({
+      url: myUrl,
+      type: 'POST',
+      data: myData,
+    })
+    .done(function(response) {
+      $('#answer-new').prepend(response);
+      // clear form
+    })
+    .fail(function() {
+      console.log("error");
+    })
+  })
+
 });
