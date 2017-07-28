@@ -1,4 +1,4 @@
-post '/questions/:question_id/answers/new' do
+post '/questions/:question_id/answers' do
   authenticate!
   @question = Question.find_by(id: params[:question_id])
   @answer = @question.answers.new(params[:answer])
@@ -6,7 +6,7 @@ post '/questions/:question_id/answers/new' do
   if @answer.save
     if request.xhr?
       # p params
-      erb :'answers/_show_answer', layout: false
+      erb :'answers/_show_answer', layout: false, locals: { answer: @answer }
     else
       redirect "/questions/#{params[:question_id]}"
     end

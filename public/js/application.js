@@ -16,8 +16,8 @@ $(document).ready(function() {
       data: myData,
     })
     .done(function(response) {
-      $('#answer-new').prepend(response);
-      // clear form
+      $('#question-answers-list').append(response);
+      $('#new-ans-form').children().first().val("");
     })
     .fail(function() {
       console.log("error");

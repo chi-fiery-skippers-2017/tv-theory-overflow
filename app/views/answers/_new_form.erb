@@ -1,5 +1,5 @@
 <div id="answer-new">
-  <form id="new-ans-form" action="/questions/<%= @question.id %>/answers/new" method="post">
+  <form id="new-ans-form" action="/questions/<%= @question.id %>/answers" method="post">
     <input type="text" name="answer[content]">
     <button type="submit">Answer</button>
   </form>
