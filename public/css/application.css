@@ -20,7 +20,7 @@ header.full-container {
 
 #page-title {
   position: absolute;
-  bottom: -15px;
+  /*bottom: -15px;*/
   left: 20px;
   text-transform: lowercase;
   font-size: 2.2em;
@@ -93,4 +93,8 @@ nav.new-question {
 
 .post-footer {
   display: inline;
+}
+
+.post-footer .points:after{
+  content: " points";
 }

@@ -9,7 +9,7 @@
     </form>
   <% end %>
   <%= erb :'/partials/_post_footer', locals: {post: @question} %>
-  <div id="question-answers-list">
+  <div id="question-answers-list" class="stable-parent">
     <% @question.answers.each do |answer| %>
       <%= erb :'answers/_show_answer', locals: { answer: answer } %>
     <% end %>

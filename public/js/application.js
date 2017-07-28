@@ -16,7 +16,7 @@ $(document).ready(function() {
       data: {type: voteOption}
     })
     promise.done(function(response){
-      $location.parents(".vote-container").siblings(".post-footer")
+      $location.parents(".vote-container").siblings(".post-footer").children(".points").text(response)
     })
   }
 

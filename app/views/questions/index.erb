@@ -14,9 +14,11 @@
   <% @questions.each do |question| %>
     <article class="question">
       <p>
-        <form class="vote-container" action="/questions/<%= question.id %>/votes" type="POST">
-          <%= erb :'/questions/_vote_buttons' %>
-        </form>
+        <% if logged_in? %>
+          <form class="vote-container" action="/questions/<%= question.id %>/votes" type="POST">
+            <%= erb :'/questions/_vote_buttons' %>
+          </form>
+        <% end %>
         <a href="/questions/<%= question.id %>"><%= question.title %></a>
         <br><%= erb :'/partials/_post_footer', locals: {post: question} %>
       </p>
