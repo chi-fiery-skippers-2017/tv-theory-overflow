@@ -63,7 +63,11 @@ nav.new-question {
   right: 10px;
 }
 
-#vote-container {
+.vote-container {
+  display: inline;
+}
+
+.vote-buttons {
   display: inline;
 }
 

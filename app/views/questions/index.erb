@@ -6,10 +6,17 @@
   </nav>
 <% end %>
 
+
+<!-- for vote commit logic, find nearest article class to distinguish vote type, then find nearest a child to determine id -->
+
+
 <div class="question-list">
   <% @questions.each do |question| %>
     <article class="question">
-      <p><%= erb :'/questions/_vote_buttons' %>
+      <p>
+        <form class="vote-container" action="/questions/<%= question.id %>/votes" type="POST">
+          <%= erb :'/questions/_vote_buttons' %>
+        </form>
         <a href="/questions/<%= question.id %>"><%= question.title %></a>
       </p>
     </article>

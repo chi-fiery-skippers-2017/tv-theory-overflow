@@ -1,5 +1,23 @@
 $(document).ready(function() {
 
-  $
+  $(".vote-container").on("click", ".vote-option", function(){
+    var $this = $(this);
+    var voteOption = $this.attr("id");
+    var url = $this.parents(".vote-container").attr("action")
+    castVote(url, voteOption)
+  })
+
+  function castVote(url, voteOption) {
+    promise = $.ajax({
+      url: url,
+      type: "POST",
+      data: {type: voteOption}
+    })
+    promise.done(function(response){
+      console.log(response)
+    })
+  }
+
+
 
 });

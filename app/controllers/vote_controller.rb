@@ -1,8 +1,9 @@
 post '/votes' do
-  redirect '/sessions/new' unless authenticate!
+  # redirect '/sessions/new' unless authenticate!
   if request.xhr?
-    "hit ajax request"
+    votetype params[:type]
+    # case
   else
-    redirect '/404'
+    "nil"
   end
 end
