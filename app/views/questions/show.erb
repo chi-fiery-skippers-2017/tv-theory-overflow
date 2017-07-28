@@ -9,4 +9,10 @@
     </form>
   <% end %>
   <%= erb :'/partials/_post_footer', locals: {post: @question} %>
+  <div id="question-answers-list">
+    <% @question.answers.each do |answer| %>
+      <%= erb :'answers/_show_answer', locals: { answer: answer } %>
+    <% end %>
+  </div>
 </article>
+<%= erb :'/answers/_new_form' %>
