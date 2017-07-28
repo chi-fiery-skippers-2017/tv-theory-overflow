@@ -32,6 +32,17 @@ header.full-container {
   padding: 0!important;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-decoration: none;
+}
+
 nav.container {
   position: absolute;
   bottom: 5px;
@@ -63,6 +74,10 @@ nav.new-question {
   right: 10px;
 }
 
+.question-title {
+  display: inline;
+}
+
 .vote-container {
   display: inline;
 }
@@ -74,4 +89,8 @@ nav.new-question {
 .vote-option {
   background: transparent;
   border: none;
+}
+
+.post-footer {
+  display: inline;
 }
