@@ -7,4 +7,10 @@
     <%= @question.author.username %>
   </div>
   <%= erb :'/questions/_vote_buttons' %>
+  <div id="question-answers-list">
+    <% @question.answers.each do |answer| %>
+      <%= erb :'answers/_show_answer', locals: { answer: answer } %>
+    <% end %>
+  </div>
 </article>
+<%= erb :'/answers/_new_form' %>
