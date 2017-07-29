@@ -69,6 +69,7 @@ nav.links a:visited {
   color: white;
 }
 
+
 .main-container {
   position: relative;
   top: 80px;
@@ -108,6 +109,30 @@ nav.new-question {
 
 #answer-new {
   margin: 0 auto;
+}
+
+
+form {
+  position: relative;
+  float: left;
+}   
+
+.form-inputs {
+  font-size: 17px;
+  border: none
+}
+
+.input-box {
+  background-color: #e8e8e8;
+  float: right;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: pink;
+  padding: 10px;
+  background-size:50px;
+  color: white;
 }
 
 .vote-container {
