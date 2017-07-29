@@ -32,4 +32,8 @@ class User < ActiveRecord::Base
     end
   end
 
+  def has_vote?(post)
+    Vote.find_by(voter: self, votable: post) != nil
+  end
+
 end
