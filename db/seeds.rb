@@ -1,6 +1,6 @@
 require 'faker'
 
-users_wanted = 4
+users_wanted = 16
 questions_wanted = 10
 answers_wanted = 16
 comments_wanted = 30
@@ -14,7 +14,7 @@ end
 users_needed.times do
   user = {
     username: Faker::RickAndMorty.unique.character,
-    email: Faker::Internet.email,
+    email: Faker::Internet.unique.email,
     password: "password"
   }
 
