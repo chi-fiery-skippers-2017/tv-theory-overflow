@@ -2,8 +2,8 @@ require 'faker'
 
 users_wanted = 16
 questions_wanted = 10
-answers_wanted = 16
-comments_wanted = 30
+answers_wanted = 30
+comments_wanted = 60
 
 users_needed = users_wanted - User.count
 
@@ -71,7 +71,7 @@ comments_to_answers_needed = comments_wanted - (Comment.count / 2)
 
 comments_to_answers_needed.times do
   comment = {
-    content: Faker::Seinfeld.quote,
+    content: Faker::HowIMetYourMother.catch_phrase,
     commentable: Answer.all.sample,
     author: User.all.sample
   }
