@@ -11,7 +11,11 @@
   <%= erb :'/partials/_post_footer', locals: {post: @question} %>
   <div id="question-answers-list" class="stable-parent">
     <% @question.answers.each do |answer| %>
-      <%= erb :'answers/_show_answer', locals: { answer: answer } %>
+      <% if answer == @question.best_answer %>
+        <div class="best-answer"><%= erb :'answers/_show_answer', locals: { answer: answer } %></div>
+      <% else %>
+        <div class="reg-answer"><%= erb :'answers/_show_answer', locals: { answer: answer } %></div>
+      <% end %>
     <% end %>
   </div>
 </article>
