@@ -21,7 +21,8 @@ header.full-container {
 #page-title {
   position: absolute;
   /*bottom: -15px;*/
-  left: 20px;
+  color: white;
+  left: 40px;
   text-transform: lowercase;
   font-size: 2.2em;
 }
@@ -43,20 +44,29 @@ p, a {
   text-decoration: none;
 }
 
+.question-list a {
+  color: purple;
+}
 nav.container {
   position: absolute;
   bottom: 5px;
   right: 50px;
+  color: white;
 }
 
 nav.links {
   list-style-type: none;
   line-height: 100px;
+  color: white;
   /*text-transform: uppercase;*/
 }
 
 nav ul li {
   display: inline-block;
+}
+
+nav.links a:visited {
+  color: white;
 }
 
 .main-container {
@@ -68,14 +78,36 @@ nav ul li {
   padding: 5px;
 }
 
+.page-content {
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.question-info {
+  padding: 50px 50px 50px 50px;
+  border: 6px solid pink;
+  /*background-color: pink;*/
+  margin: 30% auto;
+}
+
 nav.new-question {
   position: absolute;
+  padding: 3em;
   top: 25px;
   right: 10px;
 }
 
 .question-title {
-  display: inline;
+  /*display: inline;*/
+  padding: .5em 0 .5em 0;
+}
+
+#question-description {
+  /*padding: .5em 0 .5em 0;*/
+}
+
+#answer-new {
+  margin: 0 auto;
 }
 
 .vote-container {
@@ -91,7 +123,8 @@ nav.new-question {
   border: none;
 }
 
-.post-footer {
+.post-footer{
+  padding: .4em .4em .4em .4em;
   display: inline;
 }
 
