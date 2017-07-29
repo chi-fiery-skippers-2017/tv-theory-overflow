@@ -40,4 +40,13 @@ $(document).ready(function() {
     })
   })
 
+  $('.new-post-buttons').find('.comment-button').on("click", function() {
+    $.ajax({
+      url: $(this).val()
+    })
+    .done(function(response) {
+
+    })
+  })
+
 });
