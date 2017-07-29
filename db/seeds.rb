@@ -14,7 +14,7 @@ end
 users_needed.times do
   user = {
     username: Faker::RickAndMorty.unique.character,
-    email: "fake@example.net",
+    email: Faker::Internet.email,
     password: "password"
   }
 
