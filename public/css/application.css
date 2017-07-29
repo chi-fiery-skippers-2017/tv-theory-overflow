@@ -98,3 +98,7 @@ nav.new-question {
 .post-footer .points:after{
   content: " points";
 }
+
+.best-answer {
+  background-color: orange;
+}
