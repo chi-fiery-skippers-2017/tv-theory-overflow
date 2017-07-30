@@ -42,4 +42,34 @@ $(document).ready(function() {
     })
   })
 
+  $('.post-comment').find('.new-post-button').on("click", function() {
+    $button = $(this);
+    $.ajax({
+      url: $button.val()
+    })
+      .done(function(response) {
+        $button.replaceWith(response);
+    })
+      .fail(function(jqXHR, msg, error) {
+        alert(error + ": " + jqXHR.responseText);
+    })
+  })
+
+  $('.post-comment').on("submit", "form", function() {
+    event.preventDefault();
+    $form = $(this);
+    $.ajax({
+      url: $form.attr("action"),
+      method: "POST",
+      data: $form.serialize()
+    })
+      .done(function(response) {
+        $form.closest('.post-comment').siblings('.comment-list').append(response);
+        $form.find('#comment_content').val("");
+      })
+      .fail(function(jqXHR, msg, error) {
+        alert(error + ": " + jqXHR.responseText);
+      })
+  })
+
 });
