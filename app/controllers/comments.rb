@@ -5,6 +5,7 @@ get '/questions/:question_id/comments/new' do
     if logged_in?
       erb :"comments/_new_form", layout: false
     else
+      status 400
       "You have to be logged in to comment"
     end
   else
@@ -38,6 +39,7 @@ get '/answers/:answer_id/comments/new' do
     if logged_in?
       erb :"comments/_new_form", layout: false
     else
+      status 400
       "You have to be logged in to comment"
     end
   else

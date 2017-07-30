@@ -50,10 +50,8 @@ $(document).ready(function() {
       .done(function(response) {
         $button.replaceWith(response);
     })
-      .fail(function(response, msg, error) {
-        console.log(response);
-        console.log(msg);
-        console.log(error);
+      .fail(function(jqXHR, msg, error) {
+        alert(error + ": " + jqXHR.responseText);
     })
   })
 
@@ -68,6 +66,9 @@ $(document).ready(function() {
       .done(function(response) {
         $form.closest('.post-comment').siblings('.comment-list').append(response);
         $form.find('#comment_content').val("");
+      })
+      .fail(function(jqXHR, msg, error) {
+        alert(error + ": " + jqXHR.responseText);
       })
   })
 
