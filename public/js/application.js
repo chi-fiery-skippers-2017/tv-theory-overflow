@@ -41,13 +41,32 @@ $(document).ready(function() {
     })
   })
 
-  $('.new-post-buttons').find('.comment-button').on("click", function() {
+  $('.post-comment').find('.new-post-button').on("click", function() {
+    $button = $(this);
     $.ajax({
-      url: $(this).val()
+      url: $button.val()
     })
-    .done(function(response) {
+      .done(function(response) {
+        $button.replaceWith(response);
+    })
+      .fail(function(response, msg, error) {
+        console.log(response);
+        console.log(msg);
+        console.log(error);
+    })
+  })
 
+  $('.post-comment').on("submit", "form", function() {
+    event.preventDefault();
+    $form = $(this);
+    $.ajax({
+      url: $form.attr("action"),
+      method: "POST",
+      data: $form.serialize()
     })
+      .done(function(response) {
+        $form.closest('.post-comment').siblings('.comment-list').append(response);
+      })
   })
 
 });

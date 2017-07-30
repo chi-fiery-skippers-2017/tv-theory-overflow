@@ -1,0 +1,11 @@
+<div class="comment-content">
+  <% if logged_in? %>
+    <form class="vote-container" action="<%= @post_vote_route %>" type="POST">
+      <%= erb :'/questions/_vote_buttons' %>
+    </form>
+  <% end %>
+  <div class="comments">
+    <%= comment.content %>
+  </div>
+  <%= erb :'/partials/_post_footer', locals: { post: comment } %>
+</div>
