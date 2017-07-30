@@ -66,6 +66,7 @@ $(document).ready(function() {
     })
       .done(function(response) {
         $form.closest('.post-comment').siblings('.comment-list').append(response);
+        $form.find('#comment_content').val("");
       })
   })
 

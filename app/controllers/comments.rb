@@ -19,7 +19,6 @@ post '/questions/:question_id/comments' do
   @comment.author = current_user
 
   if @comment.save
-    @post_vote_route = "/comments/#{@comment.id}/votes"
     if request.xhr?
       erb :"comments/_show", layout: false, locals: { comment: @comment }
     else
@@ -53,7 +52,6 @@ post '/answers/:answer_id/comments' do
   @comment.author = current_user
 
   if @comment.save
-    @post_vote_route = "/comments/#{@comment.id}/votes"
     if request.xhr?
       erb :"comments/_show", layout: false, locals: { comment: @comment }
     else

@@ -1,6 +1,6 @@
 <div class="comment-content">
   <% if logged_in? %>
-    <form class="vote-container" action="<%= @post_vote_route %>" type="POST">
+    <form class="vote-container" action="/comments/<%= comment.id %>/votes" type="POST">
       <%= erb :'/questions/_vote_buttons' %>
     </form>
   <% end %>

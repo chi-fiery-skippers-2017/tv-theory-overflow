@@ -10,6 +10,8 @@
   <% end %>
   <%= erb :'/partials/_post_footer', locals: {post: @question} %>
 
+  <h4>Comments</h4>
+
   <div class="comment-list">
     <% @question.comments.each do |comment| %>
       <%= erb :"comments/_show", layout: false, locals: { comment: comment } %>
@@ -23,7 +25,7 @@
   </div>
 </article>
 
-<h3>Answers</h3>
+<h2>Answers</h2>
 
 <div id="question-answers-list" class="stable-parent">
   <% @question.answers.each do |answer| %>
@@ -32,6 +34,8 @@
     <% else %>
       <div class="reg-answer"><%= erb :'answers/_show_answer', locals: { answer: answer } %></div>
     <% end %>
+
+    <h4>Comments</h4>
 
     <div class="comment-list">
       <% answer.comments.each do |comment| %>
