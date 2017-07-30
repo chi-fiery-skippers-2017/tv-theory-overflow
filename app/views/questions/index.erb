@@ -1,27 +1,25 @@
-<h3 class="page-title">Top Questions</h3>
-
-<% if logged_in? %>
-  <nav class="new-question">
-    <a href="/users/<%= current_user.id %>/questions/new">Ask a question</a>
-  </nav>
-<% end %>
-
-
-<!-- for vote commit logic, find nearest article class to distinguish vote type, then find nearest a child to determine id -->
-
-
-<div class="question-list stable-parent">
-  <% @questions.each do |question| %>
-    <article class="question">
-      <p>
-        <% if logged_in? %>
-          <form class="vote-container" action="/questions/<%= question.id %>/votes" type="POST">
-            <%= erb :'/questions/_vote_buttons' %>
-          </form>
-        <% end %>
-        <a href="/questions/<%= question.id %>"><%= question.title %></a>
-        <br><%= erb :'/partials/_post_footer', locals: {post: question} %>
-      </p>
-    </article>
+<div class="page-content">
+  <h3 class="page-title">Top Questions</h3>
+  <% if logged_in? %>
+    <nav class="new-question">
+      <a href="/users/<%= current_user.id %>/questions/new">Ask a question</a>
+    </nav>
   <% end %>
-</div>
+
+  <!-- for vote commit logic, find nearest article class to distinguish vote type, then find nearest a child to determine id -->
+
+  <div class="question-list stable-parent">
+    <% @questions.each do |question| %>
+      <article class="question">
+        <p>
+          <% if logged_in? %>
+            <form class="vote-container" action="/questions/<%= question.id %>/votes" type="POST">
+              <%= erb :'/questions/_vote_buttons' %>
+            </form>
+          <% end %>
+          <a href="/questions/<%= question.id %>"><%= question.title %></a>
+          <br><%= erb :'/partials/_post_footer', locals: {post: question} %>
+        </p>
+      </article>
+    <% end %>
+  </div>
