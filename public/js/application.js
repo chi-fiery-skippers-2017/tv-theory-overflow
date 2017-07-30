@@ -25,12 +25,13 @@ $(document).ready(function() {
     event.preventDefault();
     var $form = $(this);
     var myUrl = $form.attr("action");
+    var myType = $form.attr("method")
     var myData = $form.serialize();
 
     $.ajax({
       url: myUrl,
-      type: 'POST',
-      data: {question: myData}
+      type: myType,
+      data: myData
     })
     .done(function(response) {
       $('#question-answers-list').append(response);
