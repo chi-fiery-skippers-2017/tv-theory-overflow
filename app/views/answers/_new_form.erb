@@ -1,6 +1,11 @@
 <div id="answer-new">
-  <form id="new-ans-form" action="/questions/<%= @question.id %>/answers" method="post">
-    <input type="text" name="answer[content]">
-    <button type="submit">Answer</button>
-  </form>
+  <% if logged_in? %>
+    <form id="new-ans-form" action="/questions/<%= @question.id %>/answers" method="post">
+      <input type="text" name="answer[content]">
+  <% else %>
+    <form id="redirect-to-sesh" action="/sessions/new" method="get">
+      <input type="text" name="answer[content]">
+  <% end %>
+      <button type="submit">Answer</button>
+    </form>
 </div>
