@@ -9,7 +9,6 @@
     </form>
   <% end %>
   <%= erb :'/partials/_post_footer', locals: {post: @question} %>
-
   <%= erb :'/answers/_new_form' %>
 
   <div class="post-comment">
@@ -22,10 +21,11 @@
     <% @question.comments.each do |comment| %>
       <%= erb :"comments/_show", layout: false, locals: { comment: comment } %>
     <% end %>
-  </div>
+
+    <h2>Answers</h2>
+
 </article>
 
-<h2>Answers</h2>
 
 <div id="question-answers-list" class="stable-parent">
   <% @question.answers.each do |answer| %>

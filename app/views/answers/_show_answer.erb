@@ -1,11 +1,12 @@
 <div class="answer-content">
+  <a class="best-answer-button button-link" href="/answer/<%= answer.id %>/best_answer">Best Answer</a>
   <% if logged_in? %>
-    <form class="vote-container" action="/questions/<%= @question.id %>/votes" type="POST">
-      <%= erb :'/questions/_vote_buttons' %>
-    </form>
   <% end %>
   <div class="answers">
     <%= answer.content %>
   </div>
+  <form class="vote-container" action="/questions/<%= @question.id %>/votes" type="POST">
+    <%= erb :'/questions/_vote_buttons' %>
+  </form>
   <%= erb :'/partials/_post_footer', locals: {post: answer} %>
 </div>
