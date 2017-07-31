@@ -37,11 +37,24 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
+h2 {
+  text-align: center;
+  font-size: 1.6em;
+  /*padding-bottom: 10px;*/
+  /*margin: 0 auto;*/
+}
+
 p, a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-style: italic;
   text-decoration: none;
+}
+
+p {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
 .question-list a {
@@ -86,10 +99,11 @@ nav.links a:visited {
 }
 
 .question-info {
-  padding: 0px 30px 50px 30px;
+  padding: 0px 30px 30px 15px;
   border: 6px solid pink;
   /*background-color: pink;*/
   margin: 5% auto;
+  margin-bottom: 0;
 }
 
 nav.new-question {
@@ -101,12 +115,13 @@ nav.new-question {
 
 .question-title {
   /*display: inline;*/
-  padding: .5em 0 0 0;
+  /*padding: .5em 0 0 0;*/
 }
 
 #question-description {
   /*padding: .5em 0 .5em 0;*/
   position: relative;
+  font-size: 1.15em;
   /*left: 65px;*/
   /*display: inline-block;*/
   /*width: 85%;*/
@@ -149,10 +164,11 @@ form {
 }
 
 div.answers {
-  position: relative;
-  right: 0;
-  display: inline-block;
-  font-size: 1.5em;
+  /*position: relative;*/
+  /*width: 70%;*/
+  /*right: 0;*/
+  /*display: inline-block;*/
+  font-size: 1.3em;
   font-weight: bold;
 }
 
@@ -182,7 +198,7 @@ div.post-comment {
 
 .post-footer{
   position: relative;
-  left: 60px;
+  left: 65px;
   /*padding: .4em .4em .4em .4em;*/
   /*display: inline;*/
   font-style: italic;
@@ -190,7 +206,23 @@ div.post-comment {
 }
 
 .question-info .post-footer {
+  left: 0;
   display: inline;
+}
+
+.answer-content .post-footer {
+  display: inline;
+  left: 0;
+}
+
+.comment-content .post-footer {
+  display: block;
+  left: 65px;
+}
+
+.question-list .question .post-footer {
+  display: inline;
+  left: 20px;
 }
 
 .post-footer .points:after{
@@ -212,7 +244,7 @@ div.post-comment {
 }*/
 
 .answer-container {
-  padding: 30px;
+  padding: 20px;
   border: 6px solid pink;
   margin-bottom: 10px;
 }
@@ -221,7 +253,7 @@ div.post-comment {
   padding-bottom: 10px;
 }
 
-#question-answers-list .post-comment {
+/*#question-answers-list .post-comment {
   position: relative;
   left: 60px;
-}
+}*/

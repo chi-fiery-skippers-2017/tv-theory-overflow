@@ -1,11 +1,11 @@
 <div class="answer-content">
+  <div class="answers">
+    <%= answer.content %>
+  </div>
   <% if logged_in? %>
     <form class="vote-container" action="/questions/<%= @question.id %>/votes" type="POST">
       <%= erb :'/questions/_vote_buttons' %>
     </form>
   <% end %>
-  <div class="answers">
-    <%= answer.content %>
-  </div>
   <%= erb :'/partials/_post_footer', locals: {post: answer} %>
 </div>
