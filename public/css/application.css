@@ -4,7 +4,7 @@
 }*/
 
 header.full-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   margin: 0 auto;
   width: 100%;
@@ -13,7 +13,7 @@ header.full-container {
 
 .top-menu-container {
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
   max-width: 800px;
   height: 80px;
 }
@@ -21,8 +21,8 @@ header.full-container {
 #page-title {
   position: absolute;
   /*bottom: -15px;*/
-  color: white;
-  left: 40px;
+  /*color: white;*/
+  left: 60px;
   text-transform: lowercase;
   font-size: 2.2em;
 }
@@ -37,6 +37,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
+h2 {
+  text-align: center;
+  font-size: 1.6em;
+  /*padding-bottom: 10px;*/
+  /*margin: 0 auto;*/
+}
+
 p, a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
@@ -44,20 +51,27 @@ p, a {
   text-decoration: none;
 }
 
+p {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
 .question-list a {
   color: purple;
 }
+
 nav.container {
   position: absolute;
   bottom: 5px;
   right: 50px;
-  color: white;
+  /*color: white;*/
 }
 
 nav.links {
   list-style-type: none;
   line-height: 100px;
-  color: white;
+  /*color: white;*/
   /*text-transform: uppercase;*/
 }
 
@@ -85,10 +99,11 @@ nav.links a:visited {
 }
 
 .question-info {
-  padding: 50px 50px 50px 50px;
+  padding: 0px 30px 30px 15px;
   border: 6px solid pink;
   /*background-color: pink;*/
-  margin: 30% auto;
+  margin: 5% auto;
+  margin-bottom: 0;
 }
 
 nav.new-question {
@@ -100,22 +115,28 @@ nav.new-question {
 
 .question-title {
   /*display: inline;*/
-  padding: .5em 0 .5em 0;
+  /*padding: .5em 0 0 0;*/
 }
 
 #question-description {
   /*padding: .5em 0 .5em 0;*/
+  position: relative;
+  font-size: 1.15em;
+  /*left: 65px;*/
+  /*display: inline-block;*/
+  /*width: 85%;*/
 }
 
 #answer-new {
   margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
-
 
 form {
   position: relative;
-  float: left;
-}   
+  /*float: left;*/
+}
 
 .form-inputs {
   font-size: 17px;
@@ -124,23 +145,50 @@ form {
 
 .input-box {
   background-color: #e8e8e8;
-  float: right;
+  /*float: right;*/
 }
 
 .submit-button {
-  width: 100%;
+  /*width: 100%;*/
   background-color: pink;
   padding: 10px;
   background-size:50px;
-  color: white;
+  /*color: white;*/
 }
 
 .vote-container {
-  display: inline;
+  position: relative;
+  left: 0;
+  /*width: 15px;*/
+  display: inline-block;
+}
+
+div.answers {
+  /*position: relative;*/
+  /*width: 70%;*/
+  /*right: 0;*/
+  /*display: inline-block;*/
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+div.comments {
+  position: relative;
+  margin: 5px;
+  padding-top: 7px;
+  right: 0;
+  width: 85%;
+  display: inline-block;
+}
+
+div.post-comment {
+  /*position: relative;*/
+  padding-bottom: 10px;
 }
 
 .vote-buttons {
-  display: inline;
+  /*display: inline-block;*/
+  /*display: inline;*/
 }
 
 .vote-option {
@@ -149,8 +197,32 @@ form {
 }
 
 .post-footer{
-  padding: .4em .4em .4em .4em;
+  position: relative;
+  left: 65px;
+  /*padding: .4em .4em .4em .4em;*/
+  /*display: inline;*/
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+.question-info .post-footer {
+  left: 0;
   display: inline;
+}
+
+.answer-content .post-footer {
+  display: inline;
+  left: 0;
+}
+
+.comment-content .post-footer {
+  display: block;
+  left: 65px;
+}
+
+.question-list .question .post-footer {
+  display: inline;
+  left: 20px;
 }
 
 .post-footer .points:after{
@@ -158,5 +230,30 @@ form {
 }
 
 .best-answer {
-  background-color: orange;
+  background-color: #6cf45a;
+  padding-bottom: 10px;
 }
+
+.reg-answer {
+  padding-bottom: 10px;
+}
+
+/*#question-answers-list {
+  padding: 50px 50px 50px 50px;
+  border: 6px solid pink;
+}*/
+
+.answer-container {
+  padding: 20px;
+  border: 6px solid pink;
+  margin-bottom: 10px;
+}
+
+#question-answers-list .comment-list {
+  padding-bottom: 10px;
+}
+
+/*#question-answers-list .post-comment {
+  position: relative;
+  left: 60px;
+}*/

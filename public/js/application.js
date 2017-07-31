@@ -42,7 +42,7 @@ $(document).ready(function() {
     })
   })
 
-  $('.post-comment').find('.new-post-button').on("click", function() {
+  $('.stable-parent').on("click", ".new-post-button", function() {
     $button = $(this);
     $.ajax({
       url: $button.val()
@@ -55,7 +55,7 @@ $(document).ready(function() {
     })
   })
 
-  $('.post-comment').on("submit", "form", function() {
+  $('.stable-parent').on("submit", ".new-comment-form form", function() {
     event.preventDefault();
     $form = $(this);
     $.ajax({
