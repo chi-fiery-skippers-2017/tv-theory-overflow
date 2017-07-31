@@ -4,7 +4,7 @@
 }*/
 
 header.full-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   margin: 0 auto;
   width: 100%;
@@ -21,7 +21,7 @@ header.full-container {
 #page-title {
   position: absolute;
   /*bottom: -15px;*/
-  color: white;
+  /*color: white;*/
   left: 40px;
   text-transform: lowercase;
   font-size: 2.2em;
@@ -47,17 +47,18 @@ p, a {
 .question-list a {
   color: purple;
 }
+
 nav.container {
   position: absolute;
   bottom: 5px;
   right: 50px;
-  color: white;
+  /*color: white;*/
 }
 
 nav.links {
   list-style-type: none;
   line-height: 100px;
-  color: white;
+  /*color: white;*/
   /*text-transform: uppercase;*/
 }
 
@@ -85,10 +86,10 @@ nav.links a:visited {
 }
 
 .question-info {
-  padding: 50px 50px 50px 50px;
+  padding: 0px 30px 50px 30px;
   border: 6px solid pink;
   /*background-color: pink;*/
-  margin: 30% auto;
+  margin: 5% auto;
 }
 
 nav.new-question {
@@ -100,22 +101,27 @@ nav.new-question {
 
 .question-title {
   /*display: inline;*/
-  padding: .5em 0 .5em 0;
+  padding: .5em 0 0 0;
 }
 
 #question-description {
   /*padding: .5em 0 .5em 0;*/
+  position: relative;
+  /*left: 65px;*/
+  /*display: inline-block;*/
+  /*width: 85%;*/
 }
 
 #answer-new {
   margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
-
 
 form {
   position: relative;
-  float: left;
-}   
+  /*float: left;*/
+}
 
 .form-inputs {
   font-size: 17px;
@@ -136,11 +142,37 @@ form {
 }
 
 .vote-container {
-  display: inline;
+  position: relative;
+  left: 0;
+  /*width: 15px;*/
+  display: inline-block;
+}
+
+div.answers {
+  position: relative;
+  right: 0;
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+div.comments {
+  position: relative;
+  margin: 5px;
+  padding-top: 7px;
+  right: 0;
+  width: 85%;
+  display: inline-block;
+}
+
+div.post-comment {
+  /*position: relative;*/
+  padding-bottom: 10px;
 }
 
 .vote-buttons {
-  display: inline;
+  /*display: inline-block;*/
+  /*display: inline;*/
 }
 
 .vote-option {
@@ -149,7 +181,15 @@ form {
 }
 
 .post-footer{
-  padding: .4em .4em .4em .4em;
+  position: relative;
+  left: 60px;
+  /*padding: .4em .4em .4em .4em;*/
+  /*display: inline;*/
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+.question-info .post-footer {
   display: inline;
 }
 
@@ -159,4 +199,29 @@ form {
 
 .best-answer {
   background-color: orange;
+  padding-bottom: 10px;
+}
+
+.reg-answer {
+  padding-bottom: 10px;
+}
+
+/*#question-answers-list {
+  padding: 50px 50px 50px 50px;
+  border: 6px solid pink;
+}*/
+
+.answer-container {
+  padding: 30px;
+  border: 6px solid pink;
+  margin-bottom: 10px;
+}
+
+#question-answers-list .comment-list {
+  padding-bottom: 10px;
+}
+
+#question-answers-list .post-comment {
+  position: relative;
+  left: 60px;
 }

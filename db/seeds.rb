@@ -52,7 +52,7 @@ answers_needed.times do
   add_votes(answer)
 end
 
-comments_to_questions_needed = comments_wanted - (Comment.count / 2)
+comments_to_questions_needed = comments_wanted - (Comment.count / 3)
 
 comments_to_questions_needed.times do
   comment = {
@@ -67,7 +67,7 @@ comments_to_questions_needed.times do
   add_votes(comment)
 end
 
-comments_to_answers_needed = comments_wanted - (Comment.count / 2)
+comments_to_answers_needed = comments_wanted - (Comment.count / 1.5)
 
 comments_to_answers_needed.times do
   comment = {

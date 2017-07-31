@@ -16,7 +16,7 @@
     <button class="new-post-button" value="/questions/<%= @question.id %>/comments/new">Post Comment</button>
   </div>
 
-  <h4>Comments</h4>
+  <!-- <h4>Comments</h4> -->
 
   <div class="comment-list">
     <% @question.comments.each do |comment| %>
@@ -29,22 +29,24 @@
 
 <div id="question-answers-list" class="stable-parent">
   <% @question.answers.each do |answer| %>
-    <% if answer == @question.best_answer %>
-      <div class="best-answer"><%= erb :'answers/_show_answer', locals: { answer: answer } %></div>
-    <% else %>
-      <div class="reg-answer"><%= erb :'answers/_show_answer', locals: { answer: answer } %></div>
-    <% end %>
-
-    <div class="post-comment">
-      <button class="new-post-button" value="/answers/<%= answer.id %>/comments/new">Post Comment</button>
-    </div>
-
-    <h4>Comments</h4>
-
-    <div class="comment-list">
-      <% answer.comments.each do |comment| %>
-        <%= erb :"comments/_show", layout: false, locals: { comment: comment } %>
+    <div class="answer-container">
+      <% if answer == @question.best_answer %>
+        <div class="best-answer"><%= erb :'answers/_show_answer', locals: { answer: answer } %></div>
+      <% else %>
+        <div class="reg-answer"><%= erb :'answers/_show_answer', locals: { answer: answer } %></div>
       <% end %>
+
+      <div class="post-comment">
+        <button class="new-post-button" value="/answers/<%= answer.id %>/comments/new">Post Comment</button>
+      </div>
+
+      <!-- <h4>Comments</h4> -->
+
+      <div class="comment-list">
+        <% answer.comments.each do |comment| %>
+          <%= erb :"comments/_show", layout: false, locals: { comment: comment } %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
