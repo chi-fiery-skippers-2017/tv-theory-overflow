@@ -5,8 +5,7 @@ post '/questions/:question_id/answers' do
   @answer.author = current_user
   if @answer.save
     if request.xhr?
-      # p params
-      erb :'answers/_show_answer', layout: false, locals: { answer: @answer }
+      erb :'answers/_full_answer', layout: false, locals: { answer: @answer }
     else
       redirect "/questions/#{params[:question_id]}"
     end

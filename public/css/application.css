@@ -13,7 +13,7 @@ header.full-container {
 
 .top-menu-container {
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
   max-width: 800px;
   height: 80px;
 }
@@ -22,7 +22,7 @@ header.full-container {
   position: absolute;
   /*bottom: -15px;*/
   /*color: white;*/
-  left: 40px;
+  left: 60px;
   text-transform: lowercase;
   font-size: 2.2em;
 }
