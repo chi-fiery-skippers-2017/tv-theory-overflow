@@ -16,8 +16,6 @@
     <button class="new-post-button" value="/questions/<%= @question.id %>/comments/new">Post Comment</button>
   </div>
 
-  <!-- <h4>Comments</h4> -->
-
   <div class="comment-list">
     <% @question.comments.each do |comment| %>
       <%= erb :"comments/_show", layout: false, locals: { comment: comment } %>
@@ -39,8 +37,6 @@
       <div class="post-comment">
         <button class="new-post-button" value="/answers/<%= answer.id %>/comments/new">Post Comment</button>
       </div>
-
-      <!-- <h4>Comments</h4> -->
 
       <div class="comment-list">
         <% answer.comments.each do |comment| %>

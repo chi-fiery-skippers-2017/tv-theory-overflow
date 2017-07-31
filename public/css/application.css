@@ -145,15 +145,15 @@ form {
 
 .input-box {
   background-color: #e8e8e8;
-  float: right;
+  /*float: right;*/
 }
 
 .submit-button {
-  width: 100%;
+  /*width: 100%;*/
   background-color: pink;
   padding: 10px;
   background-size:50px;
-  color: white;
+  /*color: white;*/
 }
 
 .vote-container {
@@ -230,7 +230,7 @@ div.post-comment {
 }
 
 .best-answer {
-  background-color: orange;
+  background-color: #6cf45a;
   padding-bottom: 10px;
 }
 

@@ -81,3 +81,8 @@ comments_to_answers_needed.times do
 
   add_votes(comment)
 end
+
+Question.all.each do |question|
+  question.best_answer = question.answers.sample
+  question.save
+end
