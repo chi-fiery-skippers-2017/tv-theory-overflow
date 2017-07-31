@@ -230,7 +230,7 @@ div.post-comment {
 }
 
 .best-answer {
-  background-color: #6cf45a;
+  background-color: hotpink;
   padding-bottom: 10px;
 }
 
@@ -287,9 +287,6 @@ div.post-comment {
 
 .answers {
   font-weight: bolder;
-}
-
-  padding-bottom: 10px;
 }
 
 /*#question-answers-list {

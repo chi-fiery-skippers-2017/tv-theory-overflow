@@ -1,6 +1,6 @@
 <div class="">
 
-<% if logged_in? %>
+<% if @question.author == current_user %>
 <a id="<%= answer.id %>" class="best-answer-button button-link" href="/questions/<%= answer.id %>/best_answer">Best Answer</a>
 <% end %>
 <div class="answer-content">
