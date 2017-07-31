@@ -72,4 +72,20 @@ $(document).ready(function() {
       })
   })
 
+
+  $('a.best-answer-button').on("click", function() {
+    event.preventDefault();
+    var url = $(this).attr("href");
+    var id = $(this).attr("id");
+    console.log(url)
+    $.ajax({
+      url: url,
+      method: "POST",
+      data: {answerId: id}
+    })
+    .done(function(response) {
+
+    });
+  });
+
 });

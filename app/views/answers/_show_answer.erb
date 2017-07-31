@@ -1,5 +1,7 @@
+<div class="">
+
 <% if logged_in? %>
-<a class="best-answer-button button-link" href="/answer/<%= answer.id %>/best_answer">Best Answer</a>
+<a id="<%= answer.id %>" class="best-answer-button button-link" href="/questions/<%= answer.id %>/best_answer">Best Answer</a>
 <% end %>
 <div class="answer-content">
   <div class="answers">
@@ -9,4 +11,6 @@
     <%= erb :'/questions/_vote_buttons' %>
   </form>
   <%= erb :'/partials/_post_footer', locals: {post: answer} %>
+</div>
+
 </div>

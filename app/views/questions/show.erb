@@ -9,10 +9,10 @@
     </form>
   <% end %>
   <%= erb :'/partials/_post_footer', locals: {post: @question} %>
-  <%= erb :'/answers/_new_form' %>
 
   <div class="post-comment">
     <button class="new-post-button" value="/questions/<%= @question.id %>/comments/new">Post Comment</button>
+    <br>
   </div>
 
 <% if !@question.comments.empty? %>
@@ -25,10 +25,16 @@
     <% end %>
 <% end %>
 
-    <h2>Answers</h2>
 
 </article>
 
+<h2>Answers</h2>
+<div class="answer-from">
+  <%= erb :'/answers/_new_form' %>
+  <br>
+  <br>
+
+</div>
 
 <div id="question-answers-list" class="stable-parent">
   <% @question.answers.each do |answer| %>
@@ -40,6 +46,7 @@
 
     <div class="post-comment">
       <button class="new-post-button" value="/answers/<%= answer.id %>/comments/new">Post Comment</button>
+      <br>
     </div>
 
     <% if !answer.comments.empty? %>
