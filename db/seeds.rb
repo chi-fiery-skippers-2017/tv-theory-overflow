@@ -52,7 +52,7 @@ answers_needed.times do
   add_votes(answer)
 end
 
-comments_to_questions_needed = comments_wanted - (Comment.count / 2)
+comments_to_questions_needed = (comments_wanted / 3) - (Comment.count / 3)
 
 comments_to_questions_needed.times do
   comment = {
@@ -67,7 +67,7 @@ comments_to_questions_needed.times do
   add_votes(comment)
 end
 
-comments_to_answers_needed = comments_wanted - (Comment.count / 2)
+comments_to_answers_needed = (comments_wanted / 1.5).to_i - (Comment.count / 1.5).to_i
 
 comments_to_answers_needed.times do
   comment = {
@@ -80,4 +80,9 @@ comments_to_answers_needed.times do
   comment.save
 
   add_votes(comment)
+end
+
+Question.all.each do |question|
+  question.best_answer = question.answers.sample
+  question.save
 end
