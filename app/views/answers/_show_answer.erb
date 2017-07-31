@@ -1,7 +1,7 @@
+<% if logged_in? %>
+<a class="best-answer-button button-link" href="/answer/<%= answer.id %>/best_answer">Best Answer</a>
+<% end %>
 <div class="answer-content">
-  <a class="best-answer-button button-link" href="/answer/<%= answer.id %>/best_answer">Best Answer</a>
-  <% if logged_in? %>
-  <% end %>
   <div class="answers">
     <%= answer.content %>
   </div>

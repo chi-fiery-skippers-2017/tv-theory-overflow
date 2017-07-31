@@ -15,12 +15,15 @@
     <button class="new-post-button" value="/questions/<%= @question.id %>/comments/new">Post Comment</button>
   </div>
 
+<% if !@question.comments.empty? %>
+
   <h4>Comments</h4>
 
   <div class="comment-list">
     <% @question.comments.each do |comment| %>
       <%= erb :"comments/_show", layout: false, locals: { comment: comment } %>
     <% end %>
+<% end %>
 
     <h2>Answers</h2>
 
@@ -39,6 +42,8 @@
       <button class="new-post-button" value="/answers/<%= answer.id %>/comments/new">Post Comment</button>
     </div>
 
+    <% if !answer.comments.empty? %>
+
     <h4>Comments</h4>
 
     <div class="comment-list">
@@ -46,5 +51,6 @@
         <%= erb :"comments/_show", layout: false, locals: { comment: comment } %>
       <% end %>
     </div>
+    <% end %>
   <% end %>
 </div>
